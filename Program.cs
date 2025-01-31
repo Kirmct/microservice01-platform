@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
 
@@ -30,7 +29,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
@@ -39,4 +38,5 @@ app.MapControllers();
 //populating with static class
 PrepDb.PrepPopulation(app);
 
+Console.WriteLine("--> Applications is running");
 app.Run();
